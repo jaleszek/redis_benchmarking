@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class WordBenchmark
-  def self.bencz1(refresh_db = true)
+  def self.bencz1(refresh_db = false)
     Importers::Dictionaries::PwnWordnet.new.save if refresh_db
     Benchmark.bm do |x|
       x.report{
