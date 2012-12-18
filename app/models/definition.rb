@@ -5,8 +5,6 @@ class Definition < ActiveRecord::Base
   validates :word_id, :presence => true
   validates :language_id, :presence => true
 
-  validates_with DefinitionFakesValidator
-
   serialize :fakes, Array
 
   belongs_to :word

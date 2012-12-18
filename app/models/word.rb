@@ -15,7 +15,6 @@ class Word < ActiveRecord::Base
   validates :language_id, :presence => true
 
   validates_format_of :value, :with => WORD_VALUE_REGEX
-  validates_with WordFakesValidator
 
   serialize :fakes, Array
 
